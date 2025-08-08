@@ -31,7 +31,7 @@ Siga os passos abaixo para ter uma cópia do projeto em sua máquina local.
 
 1.  Clone o repositório:
     ```bash
-    git clone [https://github.com/SEU_USUARIO/react-todo-app.git](https://github.com/SEU_USUARIO/react-todo-app.git)
+    git clone [https://github.com/IagoKAnjos/react-todo-app.git](https://github.com/IagoKAnjos/react-todo-app.git)
     ```
 2.  Navegue até o diretório do projeto:
     ```bash
