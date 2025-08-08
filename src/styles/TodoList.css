@@ -1,4 +1,3 @@
-/* src/styles/TodoList.css */
 .todo-list-container {
   max-width: 600px;
   width: 100%;
@@ -44,4 +43,30 @@
 .task-list {
   list-style: none;
   padding: 0;
+}
+
+.filter-buttons {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.filter-buttons button {
+  padding: 8px 15px;
+  margin: 0 5px;
+  background-color: #e9ecef;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.filter-buttons button.active {
+  background-color: #007bff;
+  color: white;
+  border-color: #0056b3;
+}
+
+.filter-buttons button:hover:not(.active) {
+  background-color: #f1f1f1;
 }
