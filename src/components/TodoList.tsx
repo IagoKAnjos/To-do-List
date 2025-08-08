@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import "../styles/TaskItem.css";
 
 interface Task {
   id: number;
@@ -23,9 +24,8 @@ export function TodoList() {
   }, [tasks]);
 
   const handleAddTask = (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault(); // Impede o recarregamento da página.
+    e.preventDefault();
     if (input.trim() === "") {
-      // Impede a adição de tarefas vazias.
       return;
     }
     const newTask: Task = {
@@ -36,25 +36,25 @@ export function TodoList() {
 
     setTasks([...tasks, newTask]);
     setInput("");
-
-    return (
-      <div className="todo-list-container">
-        <h1>Lista de Tarefas</h1>
-        <form onSubmit={handleAddTask}>
-          <input
-            type="text"
-            placeholder="Adicionar nova tarefa"
-            value={input}
-            onChange={(e) => setInput(e.target.value)}
-          />
-          <button type="submit">Adicionar</button>
-        </form>
-        <ul>
-          {tasks.map((task) => (
-            <li key={task.id}>{task.text}</li>
-          ))}
-        </ul>
-      </div>
-    );
   };
+
+  return (
+    <div className="todo-list-container">
+      <h1>Lista de Tarefas</h1>
+      <form onSubmit={handleAddTask}>
+        <input
+          type="text"
+          placeholder="Adicionar nova tarefa"
+          value={input}
+          onChange={(e) => setInput(e.target.value)}
+        />
+        <button type="submit">Adicionar</button>
+      </form>
+      <ul>
+        {tasks.map((task) => (
+          <li key={task.id}>{task.text}</li>
+        ))}
+      </ul>
+    </div>
+  );
 }

@@ -1,0 +1,33 @@
+.task-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  background-color: #fff;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.task-item.completed span {
+  text-decoration: line-through;
+  color: #aaa;
+}
+
+.task-item span {
+  flex-grow: 1;
+  cursor: pointer;
+}
+
+.task-actions button {
+  background-color: #f4f4f4;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 3px;
+  cursor: pointer;
+  margin-left: 8px;
+}
+
+.task-actions button:hover {
+  background-color: #e0e0e0;
+}
