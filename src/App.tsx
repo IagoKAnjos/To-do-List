@@ -1,8 +1,9 @@
-// src/App.tsx
+import TodoList from "./components/TodoList";
+
 function App() {
   return (
-    <div>
-      <h1>Lista de Tarefas</h1>
+    <div className="App">
+      <TodoList />
     </div>
   );
 }
